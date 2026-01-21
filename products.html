@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="products.css" rel="stylesheet">
+    <title>Products - SwargVatika</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-top">
+        <div class="logo">
+            <h1>SwargVatika</h1>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <div class="profile">
+            <img src="default-profile-SwargVatika.png" class="desktop-profile" alt="Profile">
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li class="mobile-profile"><a href="Profile.html"><img src="default-profile-SwargVatika.png" alt="Your Profile"></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Our Fresh Products</h1>
+            <p>Direct from our farm to your table - Fresh, Organic, and Healthy</p>
+        </div>
+    </section>
+
+    <!-- SEARCH AND FILTER BAR -->
+    <section class="search-filter-bar">
+        <div class="search-filter-container">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <!-- Filter Button -->
+            <button class="filter-button" id="filterButton">
+                <span class="filter-icon">⚙️</span>
+                Filter & Sort
+            </button>
+        </div>
+    </section>
+
+    <!-- FILTER POPUP MENU -->
+    <div class="filter-popup" id="filterPopup">
+        <div class="filter-popup-content">
+            <div class="filter-popup-header">
+                <h2>Filter & Sort</h2>
+                <button class="close-popup" id="closePopup">✕</button>
+            </div>
+
+            <div class="filter-popup-body">
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h3>Product Category</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="all" checked>
+                            <span>All Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="plant">
+                            <span>Plant Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="animal">
+                            <span>Animal Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="available">
+                            <span>Available Only</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sort by Name -->
+                <div class="filter-group">
+                    <h3>Sort by Name</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="sortName" value="none" checked>
+                            <span>None</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sortName" value="asc">
+                            <span>A to Z</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sortName" value="desc">
+                            <span>Z to A</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sort by Price -->
+                <div class="filter-group">
+                    <h3>Sort by Price</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="sortPrice" value="none" checked>
+                            <span>None</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sortPrice" value="low">
+                            <span>Low to High</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sortPrice" value="high">
+                            <span>High to Low</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-popup-footer">
+                <button class="reset-btn" id="resetFilters">Reset All</button>
+                <button class="apply-btn" id="applyFilters">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILTER BACKDROP -->
+    <div class="filter-backdrop" id="filterBackdrop"></div>
+
+    <!-- PRODUCTS GRID -->
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+            
+            <!-- Plant Products -->
+            <div class="product-card" data-category="plant" data-available="yes" data-name="Potatoes" data-price="80">
+                <div class="product-badge">Fresh</div>
+                <div class="product-image-container">
+                    <img src="potatoes.jpg" alt="Potatoes">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Potatoes</h3>
+                    <p class="product-description">Fresh farm potatoes, perfect for cooking</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹80 per kg</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plant" data-available="no" data-name="Tomatoes" data-price="40">
+                <div class="product-badge organic">Organic</div>
+                <div class="product-image-container">
+                    <img src="tomatoes.jpg" alt="Tomatoes">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tomatoes</h3>
+                    <p class="product-description">Juicy red tomatoes, rich in nutrients</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹40 per kg</p>
+                        <span class="availability-badge out-of-stock">Out of Stock</span>
+                    </div>
+                    <button class="order-btn" disabled>Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plant" data-available="yes" data-name="Dragon Fruit" data-price="99">
+                <div class="product-badge bestseller">Best Seller</div>
+                <div class="product-image-container">
+                    <img src="dragon-fruit.jpg" alt="Dragon Fruit">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Dragon Fruit</h3>
+                    <p class="product-description">Exotic dragon fruit, sweet and healthy</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹99 per piece</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plant" data-available="no" data-name="Papaya" data-price="40">
+                <div class="product-badge">Fresh</div>
+                <div class="product-image-container">
+                    <img src="papaya.jpg" alt="Papaya">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Papaya</h3>
+                    <p class="product-description">Sweet papayas, great for digestion</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹40 per kg</p>
+                        <span class="availability-badge out-of-stock">Out of Stock</span>
+                    </div>
+                    <button class="order-btn" disabled>Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="plant" data-available="no" data-name="Grapes" data-price="80">
+                <div class="product-badge organic">Organic</div>
+                <div class="product-image-container">
+                    <img src="grapes.jpg" alt="Grapes">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Grapes</h3>
+                    <p class="product-description">Sweet and juicy grapes</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹80 per kg</p>
+                        <span class="availability-badge out-of-stock">Out of Stock</span>
+                    </div>
+                    <button class="order-btn" disabled>Order Now</button>
+                </div>
+            </div>
+
+            <!-- Animal Products -->
+            <div class="product-card" data-category="animal" data-available="yes" data-name="Cow Milk" data-price="59">
+                <div class="product-badge bestseller">Best Seller</div>
+                <div class="product-image-container">
+                    <img src="cow-milk.webp" alt="Cow Milk">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cow Milk</h3>
+                    <p class="product-description">Pure and fresh cow milk</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹59 per litre</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="animal" data-available="no" data-name="Chicken Eggs" data-price="90">
+                <div class="product-badge">Fresh</div>
+                <div class="product-image-container">
+                    <img src="chicken-eggs.jpg" alt="Chicken Eggs">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chicken Eggs</h3>
+                    <p class="product-description">Farm fresh chicken eggs</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹90 per dozen</p>
+                        <span class="availability-badge out-of-stock">Out of Stock</span>
+                    </div>
+                    <button class="order-btn" disabled>Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="animal" data-available="yes" data-name="Honey" data-price="600">
+                <div class="product-badge organic">Organic</div>
+                <div class="product-image-container">
+                    <img src="honey.jpg" alt="Honey">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Honey</h3>
+                    <p class="product-description">Pure natural honey from our farm</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹600 per kg</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="animal" data-available="yes" data-name="Paneer" data-price="400">
+                <div class="product-badge">Fresh</div>
+                <div class="product-image-container">
+                    <img src="paneer.webp" alt="Paneer">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Paneer</h3>
+                    <p class="product-description">Homemade fresh paneer</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹400 per kg</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="animal" data-available="yes" data-name="Chicken Meat" data-price="250">
+                <div class="product-badge bestseller">Best Seller</div>
+                <div class="product-image-container">
+                    <img src="chicken-meat.png" alt="Chicken Meat">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chicken Meat</h3>
+                    <p class="product-description">Fresh farm-raised chicken</p>
+                    <div class="product-footer">
+                        <p class="product-price">₹250 per kg</p>
+                        <span class="availability-badge available">In Stock</span>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <p>No products found matching your search.</p>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2 class="footer-title">SwargVatika</h2>
+            <p class="footer-text">
+                Fresh from our farm, delivered with care.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>Village / District Name</p>
+            <p>+91 XXXXXXXXXX</p>
+            <p>swargvatika@gmail.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Delivery Info</h3>
+            <p>Delivery Radius: 25 km</p>
+            <p>Mon – Sat, 7:00 AM – 7:00 PM</p>
+            <p>Free pickup from farm gate</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 SwargVatika. All rights reserved.
+    </div>
+</footer>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<script src="products.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    background-color: #2d5016;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile .desktop-profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* ==================== NAVIGATION ==================== */
+.navbar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a8d08d;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-profile {
+    display: none;
+}
+
+/* ==================== MAIN ==================== */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==================== CONTACT INTRO ==================== */
+.introduction {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f0f7ed, #e8f5e0);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.welcome-message {
+    font-size: 2.4rem;
+    color: #2d5016;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.welcome-message-extended {
+    font-size: 1.15rem;
+    color: #5a7a45;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==================== CONTACT INFO SECTION ==================== */
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.section-heading {
+    font-size: 2rem;
+    color: #2d5016;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+    color: #2d5016;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: #5a7a45;
+    font-size: 1rem;
+}
+
+/* ==================== CONTACT FORM ==================== */
+.form-section {
+    margin-bottom: 4rem;
+}
+
+.contact-form {
+    background: white;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2d5016;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #2d5016;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a6b1f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45,80,22,0.3);
+}
+
+/* ==================== FOOTER ==================== */
+.site-footer {
+    background-color: #2d5016;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-text {
+    color: #a8d08d;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    color: #a8d08d;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.8);
+}
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .welcome-message {
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}

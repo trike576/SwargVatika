@@ -1,0 +1,141 @@
+/* ==================== RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    background-color: #2d5016;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+/* Desktop Profile */
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==================== NAV ==================== */
+.navbar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.mobile-profile {
+    display: none;
+}
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 600px) {
+
+    /* Hide desktop profile COMPLETELY */
+    .profile {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(to bottom, #2d5016, #1a2f0d);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar.open {
+        transform: translateX(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 6rem 0 2rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1.2rem 2rem;
+    }
+
+    /* MOBILE PROFILE INSIDE MENU */
+    .mobile-profile {
+        display: block;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .mobile-profile a {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem 2rem;
+        gap: 1rem;
+    }
+
+    .mobile-profile img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 2px solid #a8d08d;
+    }
+}

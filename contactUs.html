@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="contactUs.css" rel="stylesheet">
+    <title>Contact Us - SwargVatika</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-top">
+        <div class="logo">
+            <h1>SwargVatika</h1>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <div class="profile">
+            <img src="default-profile-SwargVatika.png" class="desktop-profile" alt="Profile">
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li class="mobile-profile">
+                <a href="Profile.html">
+                    <img src="default-profile-SwargVatika.png" alt="Your Profile">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- CONTACT INTRO -->
+    <section class="introduction">
+        <div class="intro-text">
+            <h2 class="welcome-message">Get in Touch</h2>
+            <p class="welcome-message-extended">
+                Have questions, feedback, or want to reach us directly?  
+                We’re always happy to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="best-sellers">
+        <div class="product-type">
+
+            <h1 class="plant-products-head">Contact Information</h1>
+
+            <div class="plant-products">
+
+                <!-- Address -->
+                <div class="product">
+                    <div class="product-image-container">
+                        <span class="product-label">Address</span>
+                    </div>
+                    <h3 class="price">Village / District Name</h3>
+                    <h3 class="availability">India</h3>
+                </div>
+
+                <!-- Phone -->
+                <div class="product">
+                    <div class="product-image-container">
+                        <span class="product-label">Phone</span>
+                    </div>
+                    <h3 class="price">+91 XXXXXXXXXX</h3>
+                    <h3 class="availability">Mon – Sat</h3>
+                </div>
+
+                <!-- Email -->
+                <div class="product">
+                    <div class="product-image-container">
+                        <span class="product-label">Email</span>
+                    </div>
+                    <h3 class="price">swargvatika@gmail.com</h3>
+                    <h3 class="availability">24/7</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MESSAGE SECTION -->
+        <div class="product-type">
+            <h1 class="animal-products-head">Send Us a Message</h1>
+
+            <div class="plant-products">
+                <div class="product" style="grid-column: 1 / -1; padding: 1.5rem;">
+                    <form>
+
+                        <div style="display: grid; gap: 1rem; max-width: 600px; margin: 0 auto;">
+
+                            <input type="text" placeholder="Your Name" required
+                                   style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc;">
+
+                            <input type="email" placeholder="Your Email" required
+                                   style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc;">
+
+                            <textarea placeholder="Your Message" rows="5" required
+                                      style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+
+                            <button type="submit" class="explore-button">
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h2 class="footer-title">SwargVatika</h2>
+            <p class="footer-text">
+                Fresh from our farm, delivered with care.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>Village / District Name</p>
+            <p>+91 XXXXXXXXXX</p>
+            <p>swargvatika@gmail.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Delivery Info</h3>
+            <p>Delivery Radius: 25 km</p>
+            <p>Mon – Sat, 7:00 AM – 7:00 PM</p>
+            <p>Free pickup from farm gate</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 SwargVatika. All rights reserved.
+    </div>
+</footer>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<script src="home.js" defer></script>
+
+</body>
+</html>

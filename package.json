@@ -1,0 +1,24 @@
+{
+  "name": "swargvatika",
+  "version": "1.0.0",
+  "description": "This is an ecommerce website for people to buy produce.",
+  "keywords": [],
+  "homepage": "https://github.com/trike576/SwargVatika-#readme",
+  "bugs": {
+    "url": "https://github.com/trike576/SwargVatika-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trike576/SwargVatika-.git"
+  },
+  "license": "ISC",
+  "author": "Kunal Avinash Kanse",
+  "type": "commonjs",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
